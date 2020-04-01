@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Jumbotron, Button, Form } from 'react-bootstrap'; 
+import { Jumbotron, Button, Form } from 'react-bootstrap';
+
+const axios = require('axios').default;
+
 
 function Home () {
   const [theme, setTheme] = useState("Dogs");
