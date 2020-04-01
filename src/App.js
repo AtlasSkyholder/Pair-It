@@ -108,34 +108,34 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <div className="box" onClick={() => {
+
+        <div className="box item1" onClick={() => {
           newImage(compareImg(document.getElementsByTagName("IMG"), 0))}}>
           <img style={imgSta} src={finalArr[0]} alt='dogs'/>
         </div>
-        <div className="box" onClick={() => {
+        <div className="box item2" onClick={() => {
           newImage(compareImg(document.getElementsByTagName("IMG"), 1))}}>
           <img style={imgSta} src={finalArr[1]} alt='dogs'/>
         </div>
-        <div className="box" onClick={() => {
+        <div className="box item3" onClick={() => {
           newImage(compareImg(document.getElementsByTagName("IMG"), 2))}}>
           <img style={imgSta} src={finalArr[2]} alt='dogs'/>
         </div>
-      </div>
-      <div>
-        <div className="box" onClick={() => {
+ 
+
+        <div className="box item4" onClick={() => {
           newImage(compareImg(document.getElementsByTagName("IMG"), 3))}}>
           <img style={imgSta} src={finalArr[3]} alt='dogs'/>
         </div>
-        <div className="box" onClick={() => {
+        <div className="box item5" onClick={() => {
           newImage(compareImg(document.getElementsByTagName("IMG"), 4))}}>
           <img style={imgSta} src={finalArr[4]} alt='dogs'/>
         </div>
-        <div className="box" onClick={() => {
+        <div className="box item6" onClick={() => {
           newImage(compareImg(document.getElementsByTagName("IMG"), 5))}}>
           <img style={imgSta} src={finalArr[5]} alt='dogs'/>
         </div>
-      </div>    
+   
     </div>
   );
 }
