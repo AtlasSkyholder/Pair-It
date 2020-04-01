@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import dog1 from './storage/Dog-Puppys.jpg';
-import dog2 from './storage/maxresdefault.jpg';
-import dog3 from './storage/puppy-and-adult-dog.jpg';
-import dog4 from './storage/dog-chef.jpg';
-import dog5 from './storage/dogs-with-stick.jpg';
-import dog6 from './storage/dog-yawn.jpg';
+import dog1 from './assets/img/Dog-Puppys.jpg';
+import dog2 from './assets/img/maxresdefault.jpg';
+import dog3 from './assets/img/puppy-and-adult-dog.jpg';
+import dog4 from './assets/img/dog-chef.jpg';
+import dog5 from './assets/img/dogs-with-stick.jpg';
+import dog6 from './assets/img/dog-yawn.jpg';
 
-import './App.css';
+import './assets/css/App.css';
 
 let imgSta = {
   height: '200px',
