@@ -6,7 +6,14 @@ import dog4 from './assets/img/dog-chef.jpg';
 import dog5 from './assets/img/dogs-with-stick.jpg';
 import dog6 from './assets/img/dog-yawn.jpg';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './assets/css/App.css';
+import './assets/scss/App.scss';
+
+import { Button } from 'react-bootstrap';
+
+
 
 let imgSta = {
   height: '200px',
