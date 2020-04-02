@@ -1,23 +1,13 @@
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Jumbotron, Button, Form } from 'react-bootstrap';
 
-const axios = require('axios').default;
 
-
-function Home () {
+function Home (props) {
   const [theme, setTheme] = useState("Dogs");
   const [diff, setDiff] = useState("Easy");
-
-  let onSubmit = (e) => {
-    e.preventDefault();
-    console.log(theme);
-    console.log(diff);
-
-  }
-
-
 
   return (
     <div>
@@ -25,7 +15,7 @@ function Home () {
         <h1>Pair it!!</h1>
         <h2>the game</h2>
       </Jumbotron>
-      <Form onSubmit={onSubmit}>
+      <Form >
         <Form.Group controlId="theme">
           <Form.Label>Choose Theme</Form.Label>
           <Form.Control as="select" value={theme} onChange={e => {
@@ -47,7 +37,8 @@ function Home () {
             <option>Hard</option>
           </Form.Control>
         </Form.Group>
-        <Button variant="primary" type="submit">Play!!</Button>
+        <Link to={{pathname:'/game', state: { data: [theme,diff] }}}><Button variant="primary" type="submit">Play!!</Button></Link>
+        
       </Form>
     </div>
     
