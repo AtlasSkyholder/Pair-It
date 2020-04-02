@@ -13,13 +13,6 @@ import './assets/scss/App.scss';
 
 import {choosePics, createArr} from './components/helpers/helps';
 
-
-
-
-let divNoDisp = {
-  display: 'none'
-}
-
 let divDisp = {
   display: 'block'
 }
@@ -44,24 +37,21 @@ function App(props) {
     }
 
     const middleArr = choosePics(dogArr, difficulty);
-    console.log(middleArr);
     newFinalArr(createArr(middleArr, difficulty));
     
 
   },[]);
 
+  let Diff = props.location.state.data[1];
 
   return (
     <div>
-      <div style={props.location.state.data[1] !== "Easy" ? divNoDisp : divDisp}>
-        <Easy finalArr={finalArr} theme={props.location.state.data[0]}/>
-      </div>
-      <div style={props.location.state.data[1] !== "Medium" ? divNoDisp : divDisp}>
-        <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>
-      </div>
-      <div style={props.location.state.data[1] !== "Hard" ? divNoDisp : divDisp}>
-        <Hard finalArr={finalArr} theme={props.location.state.data[0]}/>
-      </div>
+
+        {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
+        {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
+        {Diff === "Hard" && <Hard finalArr={finalArr} theme={props.location.state.data[0]}/>  }
+
+
     </div> 
   );
 }
