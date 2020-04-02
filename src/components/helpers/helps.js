@@ -1,16 +1,16 @@
-export function compareImg (imgComp, num, image, total) {
-  imgComp[num].style.visibility = "visible";
+export function compareImg (imgComp, image, total, allImageArr) {
+  imgComp.style.visibility = "visible";
   if(image === "") {
-    return imgComp[num].src;
-  } else if (image === imgComp[num].src) {
-    victory(imgComp, total);
+    return imgComp.src;  // if image is empty, sets image for comparison as the one picked
+  } else if (image === imgComp.src) {
+    victory(allImageArr, total);
     return "";
-  } else if (image !== imgComp[num].src) {
+  } else if (image !== imgComp.src) {
     setTimeout(() => {
-      imgComp[num].style.visibility = "hidden";
-      for (let i = 0; i < imgComp.length; i++) {
-        if (imgComp[i].src === image) {
-          imgComp[i].style.visibility = "hidden";
+      imgComp.style.visibility = "hidden";
+      for (let i = 0; i < allImageArr.length; i++) {
+        if (allImageArr[i].src === image) {
+          allImageArr[i].style.visibility = "hidden";
         }
       }
     }, 1000);

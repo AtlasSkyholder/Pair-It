@@ -44,6 +44,7 @@ function App(props) {
     }
 
     const middleArr = choosePics(dogArr, difficulty);
+    console.log(middleArr);
     newFinalArr(createArr(middleArr, difficulty));
     
 

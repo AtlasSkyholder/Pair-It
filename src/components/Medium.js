@@ -26,78 +26,79 @@ function Medium(props) {
       <Row>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 0, image))}}>
-        <img style={imgSta} src={finalArr[0]} alt={theme}/>
+        newImage(compareImg(document.getElementById("0"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="0" style={imgSta} src={finalArr[0]} alt={theme}/>
       </div>
         </Col>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 1, image))}}>
-        <img style={imgSta} src={finalArr[1]} alt={theme}/>
+        newImage(compareImg(document.getElementById("1"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="1" style={imgSta} src={finalArr[1]} alt={theme}/>
       </div>
         </Col>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 2, image))}}>
-        <img style={imgSta} src={finalArr[2]} alt={theme}/>
+        newImage(compareImg(document.getElementById("2"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="2" style={imgSta} src={finalArr[2]} alt={theme}/>
       </div>
         </Col>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 3, image))}}>
-        <img style={imgSta} src={finalArr[3]} alt={theme}/>
-      </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-        <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 4, image))}}>
-        <img style={imgSta} src={finalArr[4]} alt={theme}/>
-      </div>
-        </Col>
-        <Col>
-        <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 5, image))}}>
-        <img style={imgSta} src={finalArr[5]} alt={theme}/>
-      </div>
-        </Col>
-        <Col>
-        <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 6, image))}}>
-        <img style={imgSta} src={finalArr[6]} alt={theme}/>
-      </div>
-        </Col>
-        <Col>
-        <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 7, image))}}>
-        <img style={imgSta} src={finalArr[7]} alt={theme}/>
+        newImage(compareImg(document.getElementById("3"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="3" style={imgSta} src={finalArr[3]} alt={theme}/>
       </div>
         </Col>
       </Row>
       <Row>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 8, image))}}>
-        <img style={imgSta} src={finalArr[8]} alt={theme}/>
+        newImage(compareImg(document.getElementById("4"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="4" style={imgSta} src={finalArr[4]} alt={theme}/>
       </div>
         </Col>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 9, image))}}>
-        <img style={imgSta} src={finalArr[9]} alt={theme}/>
+        newImage(compareImg(document.getElementById("5"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="5" style={imgSta} src={finalArr[5]} alt={theme}/>
       </div>
         </Col>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 10, image))}}>
-        <img style={imgSta} src={finalArr[10]} alt={theme}/>
+        newImage(compareImg(document.getElementById("6"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="6" style={imgSta} src={finalArr[6]} alt={theme}/>
       </div>
         </Col>
         <Col>
         <div className="box" onClick={() => {
-        newImage(compareImg(document.getElementsByTagName("IMG"), 11, image))}}>
-        <img style={imgSta} src={finalArr[11]} alt={theme}/>
+        newImage(compareImg(document.getElementById("7"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="7" style={imgSta} src={finalArr[7]} alt={theme}/>
+      </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+        <div className="box" onClick={() => {
+        newImage(compareImg(document.getElementById("8"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="8" style={imgSta} src={finalArr[8]} alt={theme}/>
+      </div>
+        </Col>
+        <Col>
+        <div className="box" onClick={() => {
+        newImage(compareImg(document.getElementById("9"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="9" style={imgSta} src={finalArr[9]} alt={theme}/>
+      </div>
+        </Col>
+        <Col>
+        <div className="box" onClick={() => {
+        newImage(compareImg(document.getElementById("10"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="10" style={imgSta} src={finalArr[10]} alt={theme}/>
+      </div>
+        </Col>
+        <Col>
+        <div className="box" onClick={() => {
+          console.log(finalArr)
+        newImage(compareImg(document.getElementById("11"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
+        <img id="11" style={imgSta} src={finalArr[11]} alt={theme}/>
       </div>
         </Col>
       </Row>
