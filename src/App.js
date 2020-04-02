@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
+
 import dogArr from './components/dogImages.js';
+import catArr from './components/catImages.js';
+
 import Easy from './components/Easy.js';
 import Medium from './components/Medium.js';
 import Hard from './components/Hard.js';
@@ -23,6 +26,7 @@ function App(props) {
 
   useEffect(() => {
     let diff = props.location.state.data[1];
+    let theme = props.location.state.data[0];
     if(diff === "Easy") {
       difficulty = 6;
     } else if (diff === "Medium") {
@@ -31,7 +35,19 @@ function App(props) {
       difficulty = 20;
     }
 
-    const middleArr = choosePics(dogArr, difficulty);
+    let middleArr;
+
+    if(theme === "Dogs") {
+      middleArr = choosePics(dogArr, difficulty);
+    } else if (theme === "Cats") {
+      middleArr = choosePics(catArr, difficulty);
+    } else if (theme === "Cars") {
+
+    } else {
+
+    }
+
+
     newFinalArr(createArr(middleArr, difficulty));
     
 
