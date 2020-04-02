@@ -13,11 +13,6 @@ import './assets/scss/App.scss';
 
 import {choosePics, createArr} from './components/helpers/helps';
 
-let divDisp = {
-  display: 'block'
-}
-
-
 function App(props) {
 
   
@@ -45,7 +40,7 @@ function App(props) {
   let Diff = props.location.state.data[1];
 
   return (
-    <div>
+    <div >
 
         {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
         {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
