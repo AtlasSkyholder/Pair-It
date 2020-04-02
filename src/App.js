@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import dogArr from './components/dogImages.js';
 import catArr from './components/catImages.js';
+import carArr from './components/carImages.js';
 
 import Easy from './components/Easy.js';
 import Medium from './components/Medium.js';
@@ -42,7 +43,7 @@ function App(props) {
     } else if (theme === "Cats") {
       middleArr = choosePics(catArr, difficulty);
     } else if (theme === "Cars") {
-
+      middleArr = choosePics(carArr, difficulty);
     } else {
 
     }
