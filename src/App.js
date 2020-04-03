@@ -9,6 +9,8 @@ import Easy from './components/Easy.js';
 import Medium from './components/Medium.js';
 import Hard from './components/Hard.js';
 
+import Header from './components/partials/header.js';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './assets/css/App.css';
@@ -57,12 +59,15 @@ function App(props) {
 
   let Diff = props.location.state.data[1];
 
+
   return (
     <div >
 
-        {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
-        {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
-        {Diff === "Hard" && <Hard finalArr={finalArr} theme={props.location.state.data[0]}/>  }
+      <Header/> 
+
+      {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
+      {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
+      {Diff === "Hard" && <Hard finalArr={finalArr} theme={props.location.state.data[0]}/>  }
 
 
     </div> 

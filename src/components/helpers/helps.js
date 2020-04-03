@@ -26,9 +26,7 @@ const victory = (obj, total) => {
     }
   }
   if(count === total) {
-    setTimeout(() => {
-      alert("You Won!!");
-    }, 500);
+    document.getElementById('reload').style.visibility = 'visible';
     
   }
 }

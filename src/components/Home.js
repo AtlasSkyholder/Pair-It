@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import { Link } from "react-router-dom";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Jumbotron, Button, Form } from 'react-bootstrap';
 
+import '../assets/css/App.css';
+import '../assets/scss/App.scss';
 
 function Home (props) {
+
   const [theme, setTheme] = useState("Dogs");
   const [diff, setDiff] = useState("Easy");
 

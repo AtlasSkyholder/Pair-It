@@ -27,7 +27,6 @@ function Easy(props) {
       <Row>
         <Col>
         <div className="box" onClick={() => {
-          console.log(document.getElementById("0"));
           newImage(compareImg(document.getElementById("0"), image, finalArr.length, document.getElementsByTagName("IMG")))}}>
           <img id="0" style={imgSta} src={finalArr[0]} alt={theme}/>
         </div>
