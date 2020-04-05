@@ -1,12 +1,14 @@
-export function compareImg (imgComp, image, total, allImageArr) {
+import { victory }  from "../../App";
+
+export function compareImg (imgComp, image, total, allImageArr) {  //compares images.  imgComp = current clicked image , image = image saved in prop, total = number of images, allImageArr = array of all the images
   imgComp.style.visibility = "visible";
   if(image === "") {
     return imgComp.src;  // if image is empty, sets image for comparison as the one picked
   } else if (image === imgComp.src) {
-    victory(allImageArr, total);
+    victory(allImageArr, total);  // if both images match, it calls victory function
     return "";
   } else if (image !== imgComp.src) {
-    setTimeout(() => {
+    setTimeout(() => {                  // if images don't match, then gives 1 sec visibility to remember
       imgComp.style.visibility = "hidden";
       for (let i = 0; i < allImageArr.length; i++) {
         if (allImageArr[i].src === image) {
@@ -16,19 +18,6 @@ export function compareImg (imgComp, image, total, allImageArr) {
     }, 1000);
     return "";
   } 
-}
-
-const victory = (obj, total) => {
-  let count = 0;
-  for (let j = 0; j < obj.length; j++) {
-    if(obj[j].style.visibility === "visible") {
-      count++;
-    }
-  }
-  if(count === total) {
-    document.getElementById('reload').style.visibility = 'visible';
-    
-  }
 }
 
 // Selects a number of pictures from an array of pictures

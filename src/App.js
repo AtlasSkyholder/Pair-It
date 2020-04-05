@@ -11,18 +11,51 @@ import Hard from './components/Hard.js';
 
 import Header from './components/partials/header.js';
 
+import { useWindowSize } from 'react-use';
+import Confetti from 'react-confetti';
+
+import Victory from "./components/partials/applause3.mp3";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './assets/css/App.css';
 import './assets/scss/App.scss';
 
-
-
 import {choosePics, createArr} from './components/helpers/helps';
+
+let stat = {
+  opacity: 0.0
+}
+
+const victory = (obj, total) => {
+
+  let audio = new Audio(Victory);
+  let count = 0;
+  for (let j = 0; j < obj.length; j++) {
+    if(obj[j].style.visibility === "visible") {  // runs through the array of IMG and counts visible ones, if count = array.length, then victory
+      count++;
+    }
+  }
+  if(count === total) {
+    document.getElementById('reload').style.visibility = 'visible';  
+    audio.play();
+    let time = 0;
+    let opp = 0.0
+    for (let i = 0; i <= 10; i++) {
+      setTimeout(() => {
+        document.getElementById('test').style.opacity = opp;
+        opp+=0.1;
+      }, time);
+      time+= 200;
+    }
+
+
+  }
+}
+
 
 function App(props) {
 
-  
   const [finalArr, newFinalArr] = useState([]);
   let difficulty = 0;
 
@@ -53,25 +86,28 @@ function App(props) {
 
 
     newFinalArr(createArr(middleArr, difficulty));
-    
+
 
   },[]);
 
+  const { width, height } = useWindowSize();
+
   let Diff = props.location.state.data[1];
 
-
   return (
-    <div >
+    <div>
 
-      <Header/> 
+      <div id='test' style={stat}>
+        <Confetti width={width} height={height}/>
+      </div>
 
+      <Header/>
       {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
       {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
       {Diff === "Hard" && <Hard finalArr={finalArr} theme={props.location.state.data[0]}/>  }
-
 
     </div> 
   );
 }
 
-export default App;
+export  {victory, App};
