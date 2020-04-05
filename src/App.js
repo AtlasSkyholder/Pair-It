@@ -101,10 +101,12 @@ function App(props) {
         <Confetti width={width} height={height}/>
       </div>
 
-      <Header/>
-      {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
-      {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
-      {Diff === "Hard" && <Hard finalArr={finalArr} theme={props.location.state.data[0]}/>  }
+      <Header diff={Diff} />
+      <div id="game">
+        {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
+        {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
+        {Diff === "Hard" && <Hard finalArr={finalArr} theme={props.location.state.data[0]}/>  }
+      </div>
 
     </div> 
   );
