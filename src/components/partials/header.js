@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Jumbotron, Button, Col, Row } from 'react-bootstrap';
 
+import { useHistory } from "react-router-dom";
+
 import Loss from "./Loss-Horn.ogg"
 
 export default function Header(props) {
+  console.log(props);
+
   let audio = new Audio(Loss);
 
   let diff = props.diff;
-  // Get today's date and time
-  var rightNow = new Date().getTime();
+
   let time = 0;
 
   if (diff === "Easy") {
@@ -38,7 +41,7 @@ export default function Header(props) {
     if (time <= 0) {
       clearInterval(counter);
       document.getElementById("demo").innerHTML = "You Lose!!";
-      document.getElementById('game').style.display = 'none';
+      document.getElementById('game').style.visibility = 'hidden';
       document.getElementById('reload').style.visibility = 'visible';
 
       if ( document.getElementById("demo").style.display !== 'none'){
@@ -58,6 +61,14 @@ export default function Header(props) {
     window.location.replace('/pair-it');
   }
 
+  let history = useHistory();
+
+  function handleClick() {
+    history.push({pathname:'/pair-it/game', state: { data: props.data }});
+    document.getElementById('game').style.visibility = 'visible';
+    document.getElementById('reload').style.visibility = 'hidden';
+  }
+
 
   return (
     <Jumbotron>
@@ -70,7 +81,7 @@ export default function Header(props) {
         <Button className={"bbb"} onClick={() =>{ travel() }} variant="primary" type="submit">Choose Theme/Difficulty</Button>
 
         <div id='reload'>
-          <Button className={"bbb"} variant="primary" onClick={() => { window.location.replace('/pair-it/game')}}>Try Again?</Button>
+          <Button onClick={ handleClick } className={"bbb"} variant="primary" >Try Again?</Button>
         </div>
       </Col>
       <Col>

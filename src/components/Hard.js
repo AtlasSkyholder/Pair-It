@@ -3,7 +3,7 @@ import {compareImg} from './helpers/helps';
 import {Container, Row, Col} from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/css/App.css';
+
 import '../assets/scss/App.scss';
 
 

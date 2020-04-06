@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Jumbotron, Button, Form } from 'react-bootstrap';
 
-import '../assets/css/App.css';
 import '../assets/scss/App.scss';
 
 function Home (props) {
@@ -43,7 +42,7 @@ function Home (props) {
             <option>Hard</option>
           </Form.Control>
         </Form.Group>
-        <Link to={{pathname:'/pair-it/game', state: { data: [theme,diff] }}}><Button className={'bbb buttonFix'} variant="primary" type="submit">Play!!</Button></Link>
+        <Link to={{pathname:'/pair-it/game', state: { data: [theme,diff] }}}><Button className={'bbb buttonFix'} variant="primary">Play!!</Button></Link>
       </Form>
 
       

@@ -18,7 +18,6 @@ import Victory from "./components/partials/applause3.mp3";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './assets/css/App.css';
 import './assets/scss/App.scss';
 
 import {choosePics, createArr} from './components/helpers/helps';
@@ -101,7 +100,7 @@ function App(props) {
         <Confetti width={width} height={height}/>
       </div>
 
-      <Header diff={Diff} />
+      <Header diff={Diff} data={props.location.state.data}/>
       <div id="game">
         {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
         {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
