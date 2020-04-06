@@ -100,7 +100,7 @@ function App(props) {
         <Confetti width={width} height={height}/>
       </div>
 
-      <Header diff={Diff} data={props.location.state.data} finalArr={finalArr}  dogArr={dogArr} catArr={catArr} carArr={carArr} waifuArr={waifuArr} />
+      <Header diff={Diff} data={props.location.state.data} finalArr={finalArr} />
       <div id="game">
         {Diff === "Easy" && <Easy finalArr={finalArr} theme={props.location.state.data[0]}/> }
         {Diff === "Medium"&& <Medium finalArr={finalArr} theme={props.location.state.data[0]}/>  }
