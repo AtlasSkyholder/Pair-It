@@ -43,7 +43,7 @@ function Home (props) {
             <option>Hard</option>
           </Form.Control>
         </Form.Group>
-        <Link to={{pathname:'/game', state: { data: [theme,diff] }}}><Button className={'bbb buttonFix'} variant="primary" type="submit">Play!!</Button></Link>
+        <Link to={{pathname:'/pair-it/game', state: { data: [theme,diff] }}}><Button className={'bbb buttonFix'} variant="primary" type="submit">Play!!</Button></Link>
       </Form>
 
       
