@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/pair-it" exact render={props => <Home {...props}/>} />
+      <Route path="/pair-it" render={props => <Home {...props}/>} exact/>
       <Route path="/pair-it/game" render={props => <App {...props} />} />
 
       <Redirect to="/pair-it"></Redirect>

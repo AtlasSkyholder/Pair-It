@@ -6,7 +6,8 @@ import { Jumbotron, Button, Col, Row } from 'react-bootstrap';
 
 import { useHistory } from "react-router-dom";
 
-import Loss from "./Loss-Horn.ogg"
+import Loss from "./Loss-Horn.ogg";
+
 
 export default function Header(props) {
   console.log(props);
@@ -42,6 +43,11 @@ export default function Header(props) {
       clearInterval(counter);
       document.getElementById("demo").innerHTML = "You Lose!!";
       document.getElementById('game').style.visibility = 'hidden';
+      let arrTwo = props.finalArr;
+      for (let j = 0; j < arrTwo.length; j++){
+        document.getElementById(j).style.visibility = 'hidden';
+      }
+      
       document.getElementById('reload').style.visibility = 'visible';
 
       if ( document.getElementById("demo").style.display !== 'none'){
@@ -64,9 +70,16 @@ export default function Header(props) {
   let history = useHistory();
 
   function handleClick() {
+    let arr = props.finalArr;
+    for (let i = 0; i < arr.length; i++){
+      document.getElementById(i).style.visibility = 'hidden';
+    }
+    document.getElementById('test').style.opacity = 0.0;
+
     history.push({pathname:'/pair-it/game', state: { data: props.data }});
     document.getElementById('game').style.visibility = 'visible';
     document.getElementById('reload').style.visibility = 'hidden';
+
   }
 
 
