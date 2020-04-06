@@ -26,7 +26,7 @@ export default function Header(props) {
   } else if(diff === "Medium") {
     time = 40000;
   } else  if(diff === "Hard"){
-    time = 45000;
+    time = 50000;
   }
 
 

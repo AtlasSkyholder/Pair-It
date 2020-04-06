@@ -45,8 +45,11 @@ function Home (props) {
         </Form.Group>
         <Link to={{pathname:'/game', state: { data: [theme,diff] }}}><Button className={'bbb buttonFix'} variant="primary" type="submit">Play!!</Button></Link>
       </Form>
+
+      
         
       </div>
+      <p className={'copyright'}>Designed and &#169; by Frederico Alves</p>
     </div>
     
   );
