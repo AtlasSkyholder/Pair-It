@@ -1,10 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 @media only screen and (min-width: 1400px){
   .container{
     max-width: 1400px;
   }
 
-  .jumbotron{
-    background-color: lightblue;
-  }
 
+}
+
+.box {
+  background-image: url(../../question_mark.jpg);
+  background-repeat:no-repeat;
+  background-size:230px 150px;
+  height: 150px;
+  width: 230px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+#reload {
+  visibility: hidden;
+}
+
+.jumbotron{
+  background-color: lightblue;
+}
+
+.timer, h1 {
+  font-size: 50px;
+  font-family: 'Lobster';
+}
+
+h2 {
+  font-family: 'Lobster';
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.bbb {
+  font-family: 'Lobster';
+  height: 80px;
+  font-size: 30px;
+  margin-left:30px;
+  margin-bottom:5px;
+}
+
+.forms{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width:200px;
+  font-family: 'Lobster';
+  font-size: 25px;
+  text-align: center;
+}
+
+.buttonFix{
+  margin-right:20px;
+}
+
+.sele{
+  height: 70px;
+  font-size: 20px;
+}
+
+img{
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }

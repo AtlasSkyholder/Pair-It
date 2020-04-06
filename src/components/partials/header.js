@@ -1,23 +1,37 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Link } from "react-router-dom";
+
 
 import { Jumbotron, Button, Col, Row } from 'react-bootstrap';
+
+import Loss from "./Loss-Horn.ogg"
+
+
 
 
 
 
 export default function Header(props) {
+  let audio = new Audio(Loss);
 
   let diff = props.diff;
   // Get today's date and time
-  var ooo = new Date().getTime();
+  var rightNow = new Date().getTime();
+  let time = 0;
+
+  if (diff === "Easy") {
+    time = 35000;
+  } else if(diff === "Medium") {
+    time = 40000;
+  } else  if(diff === "Hard"){
+    time = 45000;
+  }
 
 
-    // Set the date we're counting down to
-  var countDownDate = new Date(ooo + 40000);
+  // Set the date we're counting down to
+  var countDownDate = new Date(rightNow + time);
 
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -32,13 +46,21 @@ export default function Header(props) {
       
     // Output the result in an element with id="demo"
     document.getElementById("demo").innerHTML = seconds + "s ";
+
+    if(distance < 10000) {
+      document.getElementById("demo").style.color = "red";
+    }
       
     // If the count down is over, write some text 
     if (distance < 0) {
       clearInterval(x);
       document.getElementById("demo").innerHTML = "You Lose!!";
       document.getElementById('game').style.display = 'none';
-      document.getElementById('reload').style.visibility = 'visible'; 
+      document.getElementById('reload').style.visibility = 'visible';
+
+      if ( document.getElementById("demo").style.display !== 'none'){
+        audio.play();
+      }
  
     }
   }, 1000);
@@ -57,14 +79,14 @@ export default function Header(props) {
         <h2>the game</h2>
       </Col>
       <Col>
-        <Button onClick={() =>{ travel() }} variant="primary" type="submit">Choose Theme/Difficulty</Button>
+        <Button className={"bbb"} onClick={() =>{ travel() }} variant="primary" type="submit">Choose Theme/Difficulty</Button>
 
         <div id='reload'>
-          <Button variant="primary" onClick={() => { window.location.reload()}}>Try Again?</Button>
+          <Button className={"bbb"} variant="primary" onClick={() => { window.location.reload()}}>Try Again?</Button>
         </div>
       </Col>
       <Col>
-        <p id="demo"></p>
+        <p id="demo" className={"timer"}></p>
       </Col>
 
       </Row>

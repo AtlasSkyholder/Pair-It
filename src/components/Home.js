@@ -19,10 +19,12 @@ function Home (props) {
         <h1>Pair it!!</h1>
         <h2>the game</h2>
       </Jumbotron>
+
+      <div className={'forms'}>
       <Form >
         <Form.Group controlId="theme">
           <Form.Label>Choose Theme</Form.Label>
-          <Form.Control as="select" value={theme} onChange={e => {
+          <Form.Control className={'sele'} as="select" value={theme} onChange={e => {
             setTheme(e.target.value)
           }}>
             <option>Dogs</option>
@@ -33,7 +35,7 @@ function Home (props) {
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label>Choose Difficulty</Form.Label>
-          <Form.Control as="select" value={diff} onChange={e => {
+          <Form.Control className={'sele'} as="select" value={diff} onChange={e => {
             setDiff(e.target.value)
           }}>
             <option>Easy</option>
@@ -41,9 +43,10 @@ function Home (props) {
             <option>Hard</option>
           </Form.Control>
         </Form.Group>
-        <Link to={{pathname:'/game', state: { data: [theme,diff] }}}><Button variant="primary" type="submit">Play!!</Button></Link>
-        
+        <Link to={{pathname:'/game', state: { data: [theme,diff] }}}><Button className={'bbb buttonFix'} variant="primary" type="submit">Play!!</Button></Link>
       </Form>
+        
+      </div>
     </div>
     
   );

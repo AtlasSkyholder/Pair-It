@@ -48,7 +48,7 @@ const victory = (obj, total) => {
       }, time);
       time+= 200;
     }
-
+    document.getElementById("demo").style.display = 'none';
 
   }
 }
