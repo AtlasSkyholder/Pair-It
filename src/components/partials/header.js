@@ -10,8 +10,6 @@ import Loss from "./Loss-Horn.ogg";
 
 
 export default function Header(props) {
-  console.log(props);
-
   let audio = new Audio(Loss);
 
   let diff = props.diff;
