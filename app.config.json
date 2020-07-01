@@ -1,0 +1,10 @@
+{
+  "apps" : [
+    {
+      "name"      : "Pair-It",
+      "script"    : "npx",
+      "interpreter": "none",
+      "args": "npm start"
+    }
+  ]
+}
